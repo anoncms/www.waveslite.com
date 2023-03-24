@@ -1,9 +1,9 @@
 {
   "lang": "en",
   "html": {
-    "title": "Anote Wallet",
-    "description": "Anote crypto currency can be mined, sent, received, exchanged or sold and used right from the start to purchase ads on our Telegram ad channel - AnonShout.",
-    "url": "https://wallet.anoneuro.com",
+    "title": "AINT Wallet",
+    "description": "AINT crypto currency can be mined, sent, received, exchanged or sold and used right from the start to purchase ads on our Telegram ad channel - AnonShout.",
+    "url": "https://aint.digital",
     "logoUrl": "./img/logo.png",
     "fbImg": "https://www.anonutopia.com/static/img/fb.png?v=1.0.0"
   },
@@ -11,9 +11,9 @@
     "password": "Enter password"
   },
   "newAccount": {
-    "newTitle": "New Anote Account",
+    "newTitle": "New AINT Account",
     "register": "Register",
-    "importTitle": "Import Anote account",
+    "importTitle": "Import AINT account",
     "seed": "Seed words",
     "import": "Import account",
     "new": "New account"
@@ -21,7 +21,7 @@
   "password": "Password",
   "repeatPassword": "Repeat Password",
   "main": {
-    "helpUrl": "https://t.me/Anonutopia"
+    "helpUrl": "https://t.me/aintdigital"
   },
   "home": {
     "seedWarning": "Save your seed words for backup purposes. You can find them in settings. <strong><u>You are responsible for your account.</u></strong>",
@@ -41,8 +41,8 @@
     "aintEarnings": "Accumulated AINT earnings",
     "aintCollectEarnings": "Withdraw",
     "balanceWaves": "AINT Balance",
-    "balanceAnotes": "ANOTE Balance",
-    "mineMessage": "Anotes can be mined in a simple way using Telegram messenger. You can read more about mining <a href=\"https://www.anonutopia.com/beginner\" target=\"_blank\">here</a>."
+    "balanceAINTs": "AINT Balance",
+    "mineMessage": "AINTs can be mined in a simple way using Telegram messenger. You can read more about mining <a href=\"https://www.anonutopia.com/beginner\" target=\"_blank\">here</a>."
   },
   "receive": {
     "account": "Account Address",

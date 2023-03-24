@@ -418,7 +418,7 @@ class Wallet {
         if (a && recipient) {
             try {
                 var amount: number = +a;
-                await this.signer.transfer({
+                await this.signer.send({
                     amount: Math.floor(amount * decimalPlaces),
                     recipient: recipient,
                     assetId: currency,
@@ -458,6 +458,13 @@ class Wallet {
                 }, 2000);
             });
         }
+        // const data = {
+        //     leaseId: '2mQEzbVcMgXFMDV9cF1ZgEhpXKh6sYyUC9spiQfA2eHp',
+        //   }
+          
+        //   const [tx] = await this.signer
+        //     .cancelLease(data)
+        //     .broadcast();
     }
 
     async exchange() {
@@ -578,7 +585,7 @@ class Wallet {
             } else if (asset.assetId == "WAVES") {
                 wallet.balanceWaves = asset.amount;
                 var balance = wallet.balanceWaves / SATINBTC;
-                $("#balanceWaves").html(String(balance.toFixed(8)));
+                $("#balanceWaves").html(String(balance.toFixed(3)));
             } else if (asset.assetId == AINT) {
                 wallet.balanceAint = asset.amount;
                 var balance = wallet.balanceAint / SATINBTC;
@@ -593,7 +600,7 @@ class Wallet {
 
     private async initWaves(seed) {
         this.signer = new Signer({
-            NODE_URL: 'https://nodes.kriptokuna.com',
+            NODE_URL: 'https://nodes.wavesplatform.com',
           });
         this.provider = new ProviderSeed(seed);
         this.signer.setProvider(this.provider);
@@ -688,7 +695,7 @@ class Wallet {
             try {
                 var seed = libs.crypto.decryptSeed(this.seed, String(password));
                 var signer = new Signer({
-                    NODE_URL: 'https://nodes.kriptokuna.com',
+                    NODE_URL: 'https://nodes.wavesplatform.com',
                   });
                 var provider = new ProviderSeed(seed);
                 signer.setProvider(provider);

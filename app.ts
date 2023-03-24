@@ -418,15 +418,19 @@ class Wallet {
         if (a && recipient) {
             try {
                 var amount: number = +a;
-                await this.signer.send({
+                var transferOpts = {
                     amount: Math.floor(amount * decimalPlaces),
                     recipient: recipient,
-                    assetId: currency,
-                    feeAssetId: feeCurrency,
                     fee: fee
-                }).broadcast();
-                $("#sendSuccess").fadeIn(function(){
-                    setTimeout(function(){
+                }
+
+                if (currency != "") {
+                    transferOpts["assetId"] = currency;
+                }
+
+                await this.signer.transfer(transferOpts).broadcast();
+                $("#sendSuccess").fadeIn(function () {
+                    setTimeout(function () {
                         $("#sendSuccess").fadeOut();
                         $("#amount").val("");
                         $("#addressRec").val("");
